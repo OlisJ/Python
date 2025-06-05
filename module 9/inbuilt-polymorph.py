@@ -37,13 +37,26 @@ def add(x,y):
 def concatenate(x,y):
     return str(x) + str(y)
 
+def subtract(x,y):
+    return (x-y)
+
+def multiply (x,y):
+    return (x*y)
+
 def operator(operation, x,y):
     return operation(x,y)
 
+
+
 result_sum=operator(add,5,2)
 result_con=operator(concatenate,"Hello", "Alban")
+result_mult=operator(multiply, 5,5)
+result_sub=operator(subtract,2,1)
+
 
 print(result_sum)
 print(result_con)
+print(result_mult)
+print(result_sub)
 
 
