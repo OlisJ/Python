@@ -78,5 +78,5 @@ class BMIApp:
         people=[]
 
     def add_person(self):
-        
+
 
