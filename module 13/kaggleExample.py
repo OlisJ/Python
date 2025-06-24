@@ -1,5 +1,3 @@
-from unittest.mock import inplace
-
 import pandas as pd
 
 df=pd.read_csv("avgIQpercountry.csv")
@@ -22,6 +20,18 @@ null_count=null_mask.sum()
 print(null_count)
 
 
-#Removing duplicates
-df.drop_duplicates(keep="first",inplace=True)
-df["Population-2023"]=df["Population-2023"].apply(lambda x: float(x.replace(",","")))
+
+#finding the average of a continent
+
+avg_iq_per_country=df.groupby('Continent')["Average IQ"].mean()
+
+avg_iq_per_country=avg_iq_per_country.sort_values(ascending=True)
+print(avg_iq_per_country)
+
+#calculate nobel prizes by country , and show countries  only with more than 1 nobel
+#you have to use  Groupby, Sum and sort values
+
+nobel_country=df.groupby("Country")['Nobel Prices'].sum()
+sorted_nobel_country=nobel_country.sort_values(ascending=False)
+sorted_nobel_country=sorted_nobel_country[sorted_nobel_country!=0]
+print(sorted_nobel_country)
