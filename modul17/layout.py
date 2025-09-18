@@ -45,3 +45,24 @@ if submit_button:
         st.write('You agrred to terms')
     else:
         st.write("You didnt agree to the terms")
+
+
+with st.container():
+    st.header("Best container")
+    st.subheader("best Subheader")
+    st.write("best write ever written")
+
+
+tab1,tab2,tab3= st.tabs(["News",'Sport','Economy'])
+
+with tab1():
+    st.header('News')
+    st.write("new News")
+
+with tab2():
+    st.header('Sport')
+    st.write("News about Sport")
+
+with tab3():
+    st.header('Economy')
+    st.write('Political and economical state of the world rn')
