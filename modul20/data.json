@@ -1,0 +1,12 @@
+{
+    "name":"John",
+    "age":30,
+    "address":{
+        "street":"Main St",
+        "City":"Prishtina",
+        "PostalCode":10000
+    },
+    "hobbies":[
+        {"type":"running"},{"type":"riding"}
+    ]
+}

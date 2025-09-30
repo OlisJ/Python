@@ -85,4 +85,10 @@ with col1:
 with col2:
     st.subheader("Top 10 Authors")
     top_authors=filtered_books['Author'].value_counts().head(10)
-    
+    st.bar_chart(top_authors)
+
+
+st.subheader('Genre')
+fig=px.pie(filtered_books,names="Genre", title="Most Liked Genres(2009-2025)", color="green",
+color_disrete_sequence=px.colors.sequential.Plasma)
+st.plotly_chart(fig)    
