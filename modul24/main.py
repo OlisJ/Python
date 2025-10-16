@@ -13,3 +13,17 @@ cursor.execute('''
         salary REAL
 )
 ''')
+
+
+connention.commit()
+
+
+cursor.execute('''
+    INSERT INTO employess(name,position,department,salary)
+    VALUES (?,?,?,?)'''
+               ,('John Doe','SWD' , 'IT', 700,00))
+               
+               
+connention.commit()
+
+cursor.execute("SELECT * FROM employess")
