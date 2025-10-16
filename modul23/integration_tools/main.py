@@ -1,10 +1,10 @@
 from fastapi import FastAPI
-from models import Deveoper,Project
+from models import Developer,Project
 
 app=FastAPI()
 
 @app.post("/developers/")
-def create_developer(developer:Deveoper):
+def create_developer(developer:Developer):
     return{"message":"Developer created succesfully", "developer":developer}
 
 @app.post("/projects/")
